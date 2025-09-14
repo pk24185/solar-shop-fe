@@ -1,5 +1,6 @@
 import { Card, CardMedia, CardContent, Typography, Button } from "@mui/material";
 import { Link } from "react-router-dom";
+import { appConfig } from "../config/appConfig";
 
 export interface Product {
     id: number;
@@ -23,7 +24,7 @@ export default function ProductCard({ product }: { product: Product }) {
             <CardMedia
                 component="img"
                 height="180"
-                image={product.imageUrl}
+                image={`${appConfig.basePath}/${product.imageUrl}`}
                 alt={product.name}
             />
             <CardContent style={{ textAlign: 'center' }}>

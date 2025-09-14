@@ -14,6 +14,7 @@ import {
 import QuoteForm from "../components/QuoteForm";
 import { getProducts } from "../api";
 import type { Product } from "../components/ProductCard";
+import { appConfig } from "../config/appConfig";
 
 export default function ProductDetails() {
     const { id } = useParams<{ id: string }>();
@@ -37,7 +38,7 @@ export default function ProductDetails() {
                     <Paper elevation={3} sx={{ p: 2 }}>
                         <Box
                             component="img"
-                            src={product.imageUrl}
+                            src={`${appConfig.basePath}/${product.imageUrl}`}
                             alt={product.name}
                             sx={{ borderRadius: 2 }}
                         />

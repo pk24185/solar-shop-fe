@@ -17,6 +17,7 @@ import {
 import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
 import { Link } from "react-router-dom";
+import { appConfig } from "../config/appConfig";
 
 const navLinks = [
     { label: "Home", path: "/" },
@@ -97,7 +98,7 @@ export default function Navbar() {
                     <Box sx={{ display: "flex", alignItems: "center", flexGrow: 1 }}>
                         <Avatar
                             alt="Brand Logo"
-                            src="/src/assets/images/avatar.png"
+                            src={`${appConfig.basePath}/images/Avatar.png`}
                             sx={{
                                 width: 38,
                                 height: 38,

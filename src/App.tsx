@@ -5,10 +5,11 @@ import Products from "./pages/Products";
 import ProductDetails from "./pages/ProductDetails";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
+import { appConfig } from "./config/appConfig";
 
 function App() {
   return (
-    <Router>
+    <Router basename={`${appConfig.basePath}`}>
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />

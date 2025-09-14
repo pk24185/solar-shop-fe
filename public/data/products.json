@@ -3,7 +3,7 @@
         "id": 1,
         "name": "Solar Panel 250W",
         "category": "Solar Panel",
-        "imageUrl": "/src/assets/images/1.png",
+        "imageUrl": "/images/1.png",
         "isFeatured": true,
         "description": "High-performance solar panel ideal for home or business use.",
         "specs": {
@@ -18,7 +18,7 @@
         "id": 2,
         "name": "Inverter 5kW",
         "category": "Inverter",
-        "imageUrl": "/src/assets/images/2.png",
+        "imageUrl": "/images/2.png",
         "isFeatured": true,
         "description": "High-performance solar panel ideal for home or business use.",
         "specs": {
@@ -33,7 +33,7 @@
         "id": 3,
         "name": "Battery 200Ah",
         "category": "Battery",
-        "imageUrl": "/src/assets/images/3.png",
+        "imageUrl": "/images/3.png",
         "isFeatured": true,
         "description": "High-performance solar panel ideal for home or business use.",
         "specs": {
