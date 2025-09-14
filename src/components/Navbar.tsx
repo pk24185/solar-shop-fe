@@ -61,7 +61,7 @@ export default function Navbar() {
                             to={item.path}
                             sx={{
                                 textAlign: "left",
-                                py: 2,
+                                py: 1,
                                 px: 3,
                                 "&:hover": { bgcolor: "secondary.main", color: "#000" },
                                 borderRadius: 2,
@@ -95,19 +95,22 @@ export default function Navbar() {
                     </IconButton>
 
                     {/* Brand with Avatar + Caption */}
-                    <Box sx={{ display: "flex", alignItems: "center", flexGrow: 1 }}>
+                    <Box sx={{ display: "flex", alignItems: "center", flexGrow: 1, minWidth: 0 }}>
                         <Avatar
                             alt="Brand Logo"
                             src={`${appConfig.basePath}/images/Avatar.png`}
-                            sx={{
-                                width: 38,
-                                height: 38,
-                                border: "2px solid white",
-                                mr: 1,
-                            }}
+                            sx={{ width: 38, height: 38, border: "2px solid white", mr: 1 }}
                         />
-                        <Box sx={{ display: "flex", flexDirection: "column", lineHeight: 1 }}>
-                            <Typography variant="h6" noWrap>
+                        <Box sx={{ display: "flex", flexDirection: "column", lineHeight: 1, minWidth: 0 }}>
+                            <Typography
+                                variant="h6"
+                                noWrap
+                                sx={{
+                                    overflow: "hidden",
+                                    textOverflow: "ellipsis",
+                                    whiteSpace: "nowrap",
+                                }}
+                            >
                                 Ganga Electricals Islamnagar
                             </Typography>
                             <Typography
@@ -118,7 +121,6 @@ export default function Navbar() {
                             </Typography>
                         </Box>
                     </Box>
-
 
                     {/* Desktop Menu */}
                     <Box sx={{ display: { xs: "none", sm: "flex" } }}>

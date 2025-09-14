@@ -10,6 +10,7 @@ import {
     TableBody,
     TableCell,
     TableRow,
+    CircularProgress,
 } from "@mui/material";
 import QuoteForm from "../components/QuoteForm";
 import { getProducts } from "../api";
@@ -28,7 +29,9 @@ export default function ProductDetails() {
         })()
     }, [id])
 
-    if (!product) return <Typography align="center">Loading...</Typography>;
+    if (!product) return <Typography sx={{ mt: 4 }} align="center">
+        <CircularProgress />
+    </Typography>;
 
     return (
         <Container sx={{ mt: 6, mb: 8 }}>
@@ -40,7 +43,12 @@ export default function ProductDetails() {
                             component="img"
                             src={`${appConfig.basePath}/${product.imageUrl}`}
                             alt={product.name}
-                            sx={{ borderRadius: 2 }}
+                            sx={{
+                                borderRadius: 2,
+                                maxWidth: "100%", // Image won't exceed parent width
+                                height: "auto",   // Maintains aspect ratio
+                                display: "block", // Removes bottom spacing
+                            }}
                         />
                     </Paper>
                 </Grid>

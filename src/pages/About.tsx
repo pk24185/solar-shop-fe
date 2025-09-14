@@ -12,7 +12,7 @@ export default function About() {
             </Typography>
 
             <Grid container justifyContent={'center'} spacing={4} sx={{ mt: 5 }}>
-                <Grid>
+                <Grid sx={{ xs: 12, flexBasis: "90%", maxWidth: "90%" }}>
                     <Paper elevation={3} sx={{ p: 4 }}>
                         <Typography variant="h5" gutterBottom>Our Mission</Typography>
                         <Typography>
@@ -21,7 +21,8 @@ export default function About() {
                         </Typography>
                     </Paper>
                 </Grid>
-                <Grid>
+
+                <Grid sx={{ xs: 12, flexBasis: "90%", maxWidth: "90%" }}>
                     <Paper elevation={3} sx={{ p: 4 }}>
                         <Typography variant="h5" gutterBottom>Why Choose Us?</Typography>
                         <Typography>
